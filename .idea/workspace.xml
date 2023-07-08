@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da56a5c4-25ab-43f9-9e91-1a1c9e66804c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/architecture.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/AmetistGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/AmetistReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/CoilGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/CoilReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/EmeraldGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/EmeraldReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/GlassGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/GlassReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/RockGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/RockReward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/SilverGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Rewards/SilverReward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="da56a5c4-25ab-43f9-9e91-1a1c9e66804c" name="Changes" comment="add 5 rewards">
+      <change afterPath="$PROJECT_DIR$/src/Classes/RewardGetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/GemItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/RewardItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Rewards/GemGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Rewards/GemGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Rewards/GemReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Rewards/GemReward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Rewards/GoldGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Rewards/GoldGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Rewards/GoldReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Rewards/GoldReward.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1688842609576</updated>
     </task>
+    <task id="LOCAL-00001" summary="add 5 rewards">
+      <created>1688844873805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688844873805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,5 +72,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add 5 rewards" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 5 rewards" />
   </component>
 </project>
