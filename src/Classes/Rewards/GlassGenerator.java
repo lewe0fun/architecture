@@ -1,14 +1,13 @@
 package Classes.Rewards;
 
-import Classes.RewardItem;
 import Classes.ItemFactory;
+import Classes.RewardItem;
 
-public class GemGenerator extends ItemFactory {
+public class GlassGenerator extends ItemFactory {
     @Override
     public RewardItem createItem() {
-        GemReward gemReward = new GemReward();
+        GlassReward gemReward = new GlassReward();
         gemReward.open();
         return gemReward;
-
     }
 }

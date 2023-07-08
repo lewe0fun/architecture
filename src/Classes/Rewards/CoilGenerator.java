@@ -1,12 +1,12 @@
 package Classes.Rewards;
 
-import Classes.RewardItem;
 import Classes.ItemFactory;
+import Classes.RewardItem;
 
-public class GoldGenerator extends ItemFactory {
+public class CoilGenerator extends ItemFactory {
     @Override
     public RewardItem createItem() {
-        GoldReward reward = new GoldReward();
+        CoilReward reward = new CoilReward();
         reward.open();
         return reward;
     }

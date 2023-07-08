@@ -1,5 +1,5 @@
 package Classes;
 
-public interface GemItem {
+public interface RewardItem {
     void open();
 }

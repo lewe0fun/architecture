@@ -2,7 +2,7 @@ package Classes;
 
 public abstract class ItemFactory {
     public void openReward(){
-        GemItem gemItem=createItem();
+        RewardItem rewardItem =createItem();
     }
-    public abstract GemItem createItem();
+    public abstract RewardItem createItem();
 }

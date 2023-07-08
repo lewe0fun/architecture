@@ -2,9 +2,9 @@ package Classes.Rewards;
 
 import Classes.RewardItem;
 
-public class GemReward implements RewardItem {
+public class CoilReward implements RewardItem {
     @Override
     public void open() {
-        System.out.println("Gem");
+        System.out.println("Coil");
     }
 }

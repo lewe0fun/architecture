@@ -1,8 +1,8 @@
 package Classes.Rewards;
 
-import Classes.GemItem;
+import Classes.RewardItem;
 
-public class GoldReward implements GemItem {
+public class GoldReward implements RewardItem {
     @Override
     public void open() {
         System.out.println("Gold");
