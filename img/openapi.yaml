@@ -18,37 +18,119 @@ paths:
           content:
             adplication/json:
               schema:
-              $ref: "#/components/scemas/Clouds"
+                $ref: "#/components/schemas/Clouds"
         "default":
           description: Все остальное
           content:
             adplication/json:
               schema:
-              $ref: "#/components/scemas/Errors"
+                $ref: "#/components/schemas/Error"
     post:
       summary: Создание заказа на облаке
       tags:
         - Clouds
-        operationId: CreateCloud
-        requestBody:
+      operationId: CreateCloud
+      requestBody:
           content:
             adplication/json:
               schema:
-                $ref: "#/component/schemas/Error"
-        response:
-          "200":
+                $ref: "#/components/schemas/Error"
+      responses:
+        "200":
           description: Успешный ответ со списком ресурсов в облаке
           content:
             adplication/json:
               schema:
-              $ref: "#/components/scemas/Clouds"
+                $ref: "#/components/schemas/Clouds"
         "default":
           description: Все остальное
           content:
             adplication/json:
               schema:
-              $ref: "#/components/scemas/Errors"
-            
+                $ref: "#/components/schemas/Error"
+  /clouds/{cloud_id}:
+    get:
+      summary: Метод получения заказа на облако по ID
+      tags:
+        - Clouds
+      operationId: getCloudById
+      parameters:
+        - name: cloud_id
+          in: path
+          required: true
+          description: Идентификатор заказа облака
+          schema:
+            type: string
+          example: 324987gh
+      responses:
+        "200":
+          description: Успешный ответ с заказом с облаком по ID
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Cloud"
+        "404":
+          description: Заказ с ID не найден
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default":
+          description: Все остальное
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+                
+    delete:
+      summary: Метод отмены заказа на облако по ID
+      tags:
+        - Clouds
+      operationId: canceledById
+      parameters:
+        - name: cloud_id
+          in: path
+          required: true
+          description: Идентификатор заказа облака
+          schema:
+            type: string
+          example: 324987gh
+      responses:
+        "200":
+          description: Успешный ответ с заказом с облаком по ID
+          content:
+            adplication/json: {}
+        "404":
+          description: Заказ с ID не найден
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "default":
+          description: Все остальное
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /customers:
+    get:
+      summary: метод получения списка покупателей на облаке
+      tags:
+        - Clouds
+      operationId: getAllCustomers
+      responses:
+        "200":
+          description: Успешный ответ со списком покупателей
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Customers"
+        "default":
+          description: Все остальное
+          content:
+            adplication/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 components: 
   schemas:
     Cloud:
@@ -66,24 +148,24 @@ components:
         id_client:
           type: string
           example: f102b15
-        os:
+        OS:
           type: string
           enum:
             - windows
             - linux
           description: операцтонная мистема сервера
-        ram:
+        RAM:
           type: string
           example: 128
           description: объем оперативной памяти
-        cpu:
+        CPU:
           type: string
           example: 8
           description: количество ядер процессора
     Clouds:
       type: array
       items:
-        $ref:"#/components/scemas/Cloud"
+        $ref: "#/components/schemas/Cloud"
     Error:
       type: object
       required:
@@ -94,4 +176,39 @@ components:
           type: integer
         message:
           type: string
-    
+    Customer:
+      type: object
+      required:
+      - id
+      - fio
+      - login
+      - hash
+      - phone
+      - email
+      properties:
+        id:
+          type: string
+          example: f102b15
+        fio:
+          type: string
+          example: Pakulin Y.A.
+        login:
+          type: string
+          example: lewe0fun
+          description: логинг покупятеля
+        hash:
+          type: string
+          example:   8743b52063cd84097a65d1633f5c74f5
+          description: хэш пароля покупятеля
+        phone:
+          type: string
+          example: 123456789
+          description: телефон покупятеля
+        email:
+          type: string
+          example: user@mail.com
+          description: почта покупятеля
+    Customers:
+      type: array
+      items:
+        $ref: "#/components/schemas/Customer"
